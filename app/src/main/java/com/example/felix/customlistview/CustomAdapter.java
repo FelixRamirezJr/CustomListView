@@ -4,6 +4,16 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Rect;
+import android.graphics.Shader;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,6 +65,7 @@ import java.util.ArrayList;
         {
             TextView tv;
             ImageView img;
+            RoundImage roundedImage;
         }
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
@@ -63,9 +74,17 @@ import java.util.ArrayList;
             View rowView;
             rowView = inflater.inflate(R.layout.program_list, null);
             holder.tv=(TextView) rowView.findViewById(R.id.textView1);
+
+
             holder.img=(ImageView) rowView.findViewById(R.id.imageView1);
+            Bitmap bm = BitmapFactory.decodeResource(context.getResources(),R.drawable.images);
+            holder.roundedImage = new RoundImage(bm);
+            holder.img.setImageDrawable(holder.roundedImage);
+            // Try Something New:
+            // The Following Code should make it rounded.
             holder.tv.setText(result[position]);
-            holder.img.setImageResource(imageId[position]);
+            //holder.img.setImageResource(imageId[position]);
+
             rowView.setOnClickListener(new View.OnClickListener()
             {
                 @Override
