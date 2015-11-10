@@ -21,10 +21,10 @@ public class MainActivity extends Activity
 
     ArrayList prgmName;
     public static int [] profilePics={R.drawable.images,R.drawable.images,R.drawable.images,R.drawable.images};
-    public static String [] Details={"Saturday 5:00pm\nBike Sesh",
-            "Monday 8:00pm\nMovie Night",
-            "Thursday 2:00pm\nGaming",
-            "Tuesday 10:00am\nWorkout"};
+    public static String [] Details={"  Saturday 5:00pm\n  Bike Sesh",
+            "  Monday 8:00pm\n  Movie Night",
+            "  Thursday 2:00pm\n  Gaming",
+            "  Tuesday 10:00am\n  Workout"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
