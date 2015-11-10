@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CustomListView</string>
     <string name="title_activity_go">go</string>
+    <string name="createButton">CREATE</string>
 </resources>

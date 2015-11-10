@@ -24,7 +24,8 @@ import java.util.ArrayList;
         Context context;
         int [] imageId;
         private static LayoutInflater inflater=null;
-        public CustomAdapter(MainActivity mainActivity, String[] prgmNameList, int[] prgmImages) {
+        public CustomAdapter(MainActivity mainActivity, String[] prgmNameList, int[] prgmImages)
+        {
             // TODO Auto-generated constructor stub
             result=prgmNameList;
             context=mainActivity;
